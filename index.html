@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Links 🔗</title>
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link CSS -->
+     <link rel="stylesheet" href="assets/styles.css">
+
+</head>
+<body class="relative flex justify-center items-center py-12 px-4 selection:bg-blue-500 selection:text-white">
+
+    <!-- Tech Particles Canvas -->
+    <canvas id="tech-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-50"></canvas>
+
+    <!-- Ambient Backgrounds -->
+    <div class="bg-glow glow-1 z-0"></div>
+    <div class="bg-glow glow-2 z-0"></div>
+
+    <!-- Main Container -->
+    <main class="relative z-10 w-full max-w-md flex flex-col items-center">
+        
+        <!-- Header / Profile Section -->
+        <header class="w-full flex flex-col items-center mb-8 relative">
+            
+            <!-- Share Button (Top Right) -->
+            <button onclick="copyProfileLink()" class="absolute top-0 right-0 p-3 glass rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-colors animate-item focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Compartilhar perfil" style="animation-delay: 0.1s;">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+            </button>
+
+            <!-- Avatar -->
+            <div class="relative animate-item" style="animation-delay: 0.2s;">
+                <img src="assets/img/logo-kamacho.dev.jpg" alt="Logo Kamacho Dev" class="w-32 h-32 rounded-2xl object-cover border-4 border-slate-800 shadow-2xl z-10 relative">
+                <!-- Subtle ring around avatar -->
+                <div class="absolute inset-[-4px] rounded-2xl border border-indigo-500/30 shadow-[0_0_20px_rgba(99,102,241,0.2)] -z-0"></div>
+            </div>
+
+            <!-- Name & Bio -->
+            <h1 class="text-2xl font-bold mt-5 tracking-tight text-white animate-item" style="animation-delay: 0.3s;">
+                Kamacho Dev
+            </h1>
+            <p class="text-sm font-medium text-indigo-400 mt-1 mb-2 animate-item" style="animation-delay: 0.4s;">
+                @kamacho.dev
+            </p>
+            <p class="text-center text-slate-300 text-sm max-w-[280px] leading-relaxed animate-item" style="animation-delay: 0.5s;">
+                Software Developer | Coffee Coder
+            </p>
+        </header>
+
+        <!-- Links Section -->
+        <nav class="w-full flex flex-col gap-4 mb-10">
+            <!-- Link 1: Portfolio -->
+            <a href="https://kauan-camacho.github.io/Meu-Portifolio-Profissional/" class="link-btn glass w-full py-4 px-6 rounded-2xl flex items-center justify-between text-white no-underline group animate-item" style="animation-delay: 0.6s;" target="_blank">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:text-blue-300 group-hover:bg-blue-500/30 transition-colors shadow-[0_0_10px_rgba(59,130,246,0.2)]">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <span class="font-semibold text-[15px]">Meu Portfólio</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right text-slate-500 text-sm group-hover:text-blue-400 transition-colors"></i>
+            </a>
+
+            <!-- Link 2: GitHub -->
+            <a href="https://github.com/kauan-camacho" class="link-btn glass w-full py-4 px-6 rounded-2xl flex items-center justify-between text-white no-underline group animate-item" style="animation-delay: 0.7s;" target="_blank">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-700/50 flex items-center justify-center text-slate-300 group-hover:text-white group-hover:bg-slate-600/50 transition-colors shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <span class="font-semibold text-[15px]">GitHub</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right text-slate-500 text-sm group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- Link 3: LinkedIn -->
+            <a href="https://www.linkedin.com/in/kauan-camacho" class="link-btn glass w-full py-4 px-6 rounded-2xl flex items-center justify-between text-white no-underline group animate-item" style="animation-delay: 0.8s;" target="_blank">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 group-hover:text-sky-300 group-hover:bg-sky-500/30 transition-colors shadow-[0_0_10px_rgba(14,165,233,0.2)]">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <span class="font-semibold text-[15px]">LinkedIn</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right text-slate-500 text-sm group-hover:text-sky-400 transition-colors"></i>
+            </a>
+
+            <!-- Link 4: Instagram -->
+            <a href="https://www.instagram.com/kamacho.dev/" class="link-btn glass w-full py-4 px-6 rounded-2xl flex items-center justify-between text-white no-underline group animate-item" style="animation-delay: 0.9s;" target="_blank">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-400 group-hover:text-fuchsia-300 group-hover:bg-fuchsia-500/30 transition-colors shadow-[0_0_10px_rgba(217,70,239,0.2)]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="font-semibold text-[15px]">Instagram</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right text-slate-500 text-sm group-hover:text-fuchsia-400 transition-colors"></i>
+            </a>
+            
+            <!-- Link 5: WhatsApp -->
+            <a href="https://wa.me/5519994906750?text=Ol%C3%A1%20Kamacho%20tudo%20bem%3F%20vim%20pelo%20seu%20Instagram!!" class="link-btn glass w-full py-4 px-6 rounded-2xl flex items-center justify-between text-white no-underline group animate-item" style="animation-delay: 1.0s;" target="_blank">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:text-emerald-300 group-hover:bg-emerald-500/30 transition-colors shadow-[0_0_10px_rgba(16,185,129,0.2)]">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <span class="font-semibold text-[15px]">WhatsApp</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right text-slate-500 text-sm group-hover:text-emerald-400 transition-colors"></i>
+            </a>
+        </nav>
+
+        <!-- Social Icons Bottom -->
+        <footer class="flex items-center gap-6 animate-item" style="animation-delay: 1.1s;">
+            <a href="https://github.com/kauan-camacho" class="social-icon text-2xl" aria-label="GitHub" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kauan-camacho" class="social-icon text-2xl" aria-label="LinkedIn" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/camachokauanlucas/" class="social-icon text-2xl" aria-label="Instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5519994906750?text=Ol%C3%A1%20Kamacho%20tudo%20bem%3F%20vim%20pelo%20seu%20Instagram!!" class="social-icon text-2xl" aria-label="WhatsApp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- Toast Notification (Hidden by default) -->
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 glass bg-slate-900/90 text-white px-6 py-3 rounded-full shadow-2xl border border-blue-500/30 opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-3 translate-y-4">
+        <i class="fa-solid fa-circle-check text-blue-400"></i>
+        <span class="text-sm font-medium">Link copiado com sucesso!</span>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
